@@ -125,7 +125,7 @@
 
 // Copy Array Items Using slice()
 
-const arr = [5, 6, 7];
+// const arr = [5, 6, 7];
 
 // const arr2 = arr.slice();
 
@@ -415,22 +415,20 @@ const nestedObject = {
 
 // Use Closure to Protect Properties Within an Object from Being Modified Externally
 
-// function Bird() {
-//   let hatchedEgg = 10;
+function Bird() {
+  let hatchedEgg = 10;
 
-//   this.getHatchedEggCount = function() { 
-//     return hatchedEgg;
-//   };
-// }
-// let ducky = new Bird();
-// console.log(ducky.getHatchedEggCount()); 
+  this.getHatchedEggCount = function() { 
+    return hatchedEgg;
+  };
+}
+
+let ducky = new Bird();
+console.log(ducky.getHatchedEggCount()); 
+console.log(ducky.hatchedEgg); 
 
 // Understand the Immediately Invoked Function Expression (IIFE)
 
-// (function () {
-//   console.log("Chirp, chirp!");
-// })();
-
-
-
-
+(function () {
+  console.log("Chirp, chirp!");
+})();
